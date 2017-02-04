@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "micro",
-    "dev": "nodemon --exec \"npm start\" -e \"js\""
+    "dev": "nodemon --exec \"npm start\" -e \"js\"",
+    "test": "standard"
   },
   "repository": {
     "type": "git",
@@ -24,6 +25,7 @@
     "request": "^2.79.0"
   },
   "devDependencies": {
-    "nodemon": "^1.11.0"
+    "nodemon": "^1.11.0",
+    "standard": "^8.6.0"
   }
 }
