@@ -25,6 +25,18 @@ REDIRECT_URL=xyz123
 
 The user will be redirected to the `REDIRECT_URL` with the `access_token` query param set to the GitHub access token. E.g. setting `REDIRECT_URL=https://google.com` will redirect them to `https://google.com/?access_token=asdf123`. (where `asdf123` is the provided access token)
 
+The last step to make this work is to set the authorization callback URL of [your application on GitHub](https://github.com/settings/developers) to whatever URL `now` gave you:
+
+![Authorization callback URL: 'your-url.now.sh'](https://cloud.githubusercontent.com/assets/7525670/22621592/95546272-eb27-11e6-80f3-6a2cd556d319.png)
+
+To log people in, all you have to do is to have them click on a link to
+
+```
+https://github.com/login/oauth/authorize?client_id=asdf123
+```
+
+Adding the client id that you got from GitHub as the `client_id` query param. (instead of `asdf123` in the example above)
+
 ## Development
 
 ```sh
