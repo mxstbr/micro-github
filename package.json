@@ -1,0 +1,29 @@
+{
+  "name": "react-vienna-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "micro",
+    "dev": "nodemon --exec \"npm start\" -e \"js\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/react-vienna/backend.git"
+  },
+  "author": "Max Stoiber <contact@mxstbr.com> (http://mxstbr.com/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/react-vienna/backend/issues"
+  },
+  "homepage": "https://github.com/react-vienna/backend#readme",
+  "dependencies": {
+    "axios": "^0.15.3",
+    "dotenv": "^4.0.0",
+    "micro": "^6.2.1",
+    "request": "^2.79.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.11.0"
+  }
+}
