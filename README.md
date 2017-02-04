@@ -49,6 +49,14 @@ Then whatever you specified as the `REDIRECT_URL` will be called with the access
 git clone git@github.com:mxstbr/micro-github.git
 ```
 
+Move `.env.example` to `.env` and fill in your GitHub API details and redirect url
+
+```sh
+npm run dev
+```
+
+The server will then be listening at `localhost:3000`, so set the authorization callback URL of your dev application on GitHub to that.
+
 ## License
 
 Copyright (c) 2017 Maximilian Stoiber, licensed under the MIT license. See [LICENSE.md](LICENSE.md) for more information.
