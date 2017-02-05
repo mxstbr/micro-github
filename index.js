@@ -5,8 +5,10 @@ const axios = require('axios')
 const { send } = require('micro')
 
 const createRedirectHTML = (data) => `
+<!DOCTYPE html>
 <html>
   <head>
+    <meta charset="utf-8">
     <title>Redirecting…</title>
   </head>
   <body>
