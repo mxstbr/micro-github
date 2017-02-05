@@ -26,7 +26,9 @@ REDIRECT_URL=https://google.com
 
 > Create an application on GitHub [here](https://github.com/settings/applications/new) to get your client id and secret if you haven't done that already.
 
-The user will be redirected to the `REDIRECT_URL` with the `access_token` query param set to the GitHub access token. E.g. setting `REDIRECT_URL=https://google.com` will redirect them to `https://google.com/?access_token=asdf123`. (where `asdf123` is the provided access token)
+When authentication was successful, the user will be redirected to the `REDIRECT_URL` with the `access_token` query param set to the GitHub access token. You can then use that token to interact with the [GitHub API](https://developer.github.com/v3/)!
+
+> E.g. setting `REDIRECT_URL=https://google.com` will redirect them to `https://google.com/?access_token=asdf123`. (where `asdf123` is the provided access token)
 
 ### Finish setup
 
@@ -34,15 +36,13 @@ To make this work you have to set the authorization callback URL of [your applic
 
 ![Authorization callback URL: 'your-url.now.sh'](https://cloud.githubusercontent.com/assets/7525670/22621592/95546272-eb27-11e6-80f3-6a2cd556d319.png)
 
-To log people in they just have to click on a link to
+To log people in they just have to click on a link to `https://github.com/login/oauth/authorize?client_id=asdf123`. (where `client_id` is your GitHub app client id) This will redirect them to the GitHub sign in page for your app, which looks like this:
 
-```
-https://github.com/login/oauth/authorize?client_id=asdf123
-```
+![Authorize my app to access your data on GitHub](https://cloud.githubusercontent.com/assets/7525670/22627265/fc50c680-ebbf-11e6-9126-dcdef37d3c3d.png)
 
-Adding the client id that you got from GitHub as the `client_id` query param. (instead of `asdf123` in the example above)
+> You can change the scope of the data you can access with the `scope` query param, see the [GitHub docs](https://developer.github.com/v3/oauth/#scopes)!
 
-Then whatever you specified as the `REDIRECT_URL` will be called with the access token from GitHub for you to use! 🎉
+When authentication is successful, the user will be redirected to the `REDIRECT_URL` with the access token from GitHub for you to use! 🎉
 
 ### Error handling
 
