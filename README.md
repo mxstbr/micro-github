@@ -62,6 +62,10 @@ npm run dev
 
 The server will then be listening at `localhost:3000`, so set the authorization callback URL of your dev application on GitHub to that.
 
+## Updating
+
+The `master` branch of this repository is what you will be deploying. To update to a new version with potential bugfixes, all you have to do is run the `now` command again and then set the authorization callback URL on GitHub to the new URL that `now` gave you! 👌
+
 ## License
 
 Copyright (c) 2017 Maximilian Stoiber, licensed under the MIT license. See [LICENSE.md](LICENSE.md) for more information.
