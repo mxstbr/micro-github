@@ -4,20 +4,16 @@ const querystring = require('querystring')
 const axios = require('axios')
 const { send } = require('micro')
 
-const createRedirectHTML = (data) => `
+const createRedirectHTML = (data) => {
+  const url = `${process.env.REDIRECT_URL}?${querystring.stringify(data)}`
+  return `
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>Redirecting…</title>
-  </head>
-  <body>
-    <script>
-      window.location.href = '${process.env.REDIRECT_URL}?${querystring.stringify(data)}';
-    </script>
-  </body>
-</html>
+<meta charset=utf-8>
+<title>Redirecting…</title>
+<meta http-equiv=refresh content="0;URL=${url}">
+<script>location='${url}'</script>
 `
+}
 
 module.exports = async (req, res) => {
   res.setHeader('Content-Type', 'text/html')
