@@ -1,6 +1,6 @@
 # `micro-github`
 
-A tiny microservice to add authentication with GitHub to your application.
+A tiny microservice that makes adding authentication with GitHub to your application easy.
 
 ## Usage
 
