@@ -22,6 +22,8 @@ GH_CLIENT_ID=xyz123
 GH_CLIENT_SECRET=asdf123
 # The URL to redirect the user to once the authentication was successful
 REDIRECT_URL=https://google.com
+# Optional: Specify the GitHub host when using GitHub Enterprise
+GH_HOST=github.my-company.com
 ```
 
 > Create an application on GitHub [here](https://github.com/settings/applications/new) to get your client id and secret if you haven't done that already.
