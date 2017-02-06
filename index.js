@@ -3,6 +3,7 @@ const url = require('url')
 const querystring = require('querystring')
 const axios = require('axios')
 const { send } = require('micro')
+const githubUrl = process.env.GH_HOST || 'github.com'
 
 const createRedirectHTML = (data) => {
   const url = `${process.env.REDIRECT_URL}?${querystring.stringify(data)}`
@@ -24,7 +25,7 @@ module.exports = async (req, res) => {
     try {
       const { status, data } = await axios({
         method: 'POST',
-        url: 'https://github.com/login/oauth/access_token',
+        url: `https://${githubUrl}/login/oauth/access_token`,
         responseType: 'json',
         data: {
           client_id: process.env.GH_CLIENT_ID,
