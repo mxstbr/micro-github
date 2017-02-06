@@ -1,5 +1,5 @@
 {
-  "name": "react-vienna-backend",
+  "name": "micro-github",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -10,14 +10,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/react-vienna/backend.git"
+    "url": "git+https://github.com/mxstbr/micro-github.git"
   },
   "author": "Max Stoiber <contact@mxstbr.com> (http://mxstbr.com/)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/react-vienna/backend/issues"
+    "url": "https://github.com/mxstbr/micro-github/issues"
   },
-  "homepage": "https://github.com/react-vienna/backend#readme",
+  "homepage": "https://github.com/mxstbr/micro-github.git#readme",
   "dependencies": {
     "axios": "^0.15.3",
     "dotenv": "^4.0.0",
