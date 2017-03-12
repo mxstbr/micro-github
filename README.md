@@ -34,11 +34,11 @@ When authentication was successful, the user will be redirected to the `REDIRECT
 
 ### Finish setup
 
-To make this work you have to set the authorization callback URL of [your application on GitHub](https://github.com/settings/developers) to whatever URL `now` gave you:
+To make this work you have to set the authorization callback URL of [your application on GitHub](https://github.com/settings/developers) to whatever URL `now` gave you plus the path `/callback` e.g. `http://localhost:3000/callback`:
 
 ![Authorization callback URL: 'your-url.now.sh'](https://cloud.githubusercontent.com/assets/7525670/22621592/95546272-eb27-11e6-80f3-6a2cd556d319.png)
 
-To log people in they just have to click on a link to `https://github.com/login/oauth/authorize?client_id=asdf123`. (where `client_id` is your GitHub app client id) This will redirect them to the GitHub sign in page for your app, which looks like this:
+To log people in provide a link to url `now` gave you plus the path `login` e.g. `http://localhost:3000/login` when they click on the link it will reditect to `https://github.com/login/oauth/authorize?client_id=asdf123&state`. (where `client_id` is your GitHub app client id in `.env` and `state` is a randomly generated string). This will redirect them to the GitHub sign in page for your app, which looks like this:
 
 ![Authorize my app to access your data on GitHub](https://cloud.githubusercontent.com/assets/7525670/22627265/fc50c680-ebbf-11e6-9126-dcdef37d3c3d.png)
 
@@ -62,7 +62,7 @@ Move `.env.example` to `.env` and fill in your GitHub API details and redirect u
 npm run dev
 ```
 
-The server will then be listening at `localhost:3000`, so set the authorization callback URL of your dev application on GitHub to that.
+The server will then be listening at `localhost:3000`, so set the authorization callback URL of your dev application on GitHub to `http://localhost:3000/callback`.
 
 ## Updating
 
