@@ -36,7 +36,7 @@ When authentication was successful, the user will be redirected to the `REDIRECT
 
 To make this work you have to set the authorization callback URL of [your application on GitHub](https://github.com/settings/developers) to whatever URL `now` gave you plus the path `/callback` e.g. `http://localhost:3000/callback`:
 
-![Authorization callback URL: 'your-url.now.sh'](https://cloud.githubusercontent.com/assets/7525670/22621592/95546272-eb27-11e6-80f3-6a2cd556d319.png)
+![Authorization callback URL: 'your-url.now.sh'](https://cloud.githubusercontent.com/assets/168870/24585953/9543e03a-178e-11e7-8f10-07be5c10682c.png)
 
 To log people in provide a link to url `now` gave you plus the path `login` e.g. `http://localhost:3000/login` when they click on the link it will reditect to `https://github.com/login/oauth/authorize?client_id=asdf123&state`. (where `client_id` is your GitHub app client id in `.env` and `state` is a randomly generated string). This will redirect them to the GitHub sign in page for your app, which looks like this:
 
