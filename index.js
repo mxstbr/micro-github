@@ -31,7 +31,7 @@ const callback = async (req, res) => {
   } else if (!states.includes(state)) {
     redirectWithQueryString(res, { error: 'Unknown state' })
   } else {
-    states.splice(state.indexOf(state), 1);
+    states.splice(states.indexOf(state), 1);
     try {
       const { status, data } = await axios({
         method: 'POST',
