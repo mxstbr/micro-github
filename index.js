@@ -17,8 +17,9 @@ const redirectWithQueryString = (res, data) => {
 
 const login = async (req, res) => {
   const state = await uid(20);
+  const scope = process.env.SCOPE ? `&scope=${encodeURI(process.env.SCOPE)}` : '';
   states.push(state);
-  redirect(res, 302, `https://${githubUrl}/login/oauth/authorize?client_id=${process.env.GH_CLIENT_ID}&state=${state}`)
+  redirect(res, 302, `https://${githubUrl}/login/oauth/authorize?client_id=${process.env.GH_CLIENT_ID}&state=${state}${scope}`)
 };
 
 const callback = async (req, res) => {
