@@ -42,7 +42,7 @@ To log people in provide a link to url `now` gave you plus the path `login` e.g.
 
 ![Authorize my app to access your data on GitHub](https://cloud.githubusercontent.com/assets/7525670/22627265/fc50c680-ebbf-11e6-9126-dcdef37d3c3d.png)
 
-> You can change the scope of the data you can access with the `scope` query param, see the [GitHub docs](https://developer.github.com/v3/oauth/#scopes)!
+> You can change the scope of the data you can access with the `scope` environment param `SCOPE`, see the [GitHub docs](https://developer.github.com/v3/oauth/#scopes)!
 
 When authentication is successful, the user will be redirected to the `REDIRECT_URL` with the access token from GitHub for you to use! 🎉
 
