@@ -18,8 +18,14 @@ const redirectWithQueryString = (res, data) => {
 const login = async (req, res) => {
   const state = await uid(20);
   states.push(state);
-  redirect(res, 302, `https://${githubUrl}/login/oauth/authorize?client_id=${process.env.GH_CLIENT_ID
-    }&state=${state}&${querystring.stringify(req.query)}`)
+  const { scopes, allow_signup } = req.query;
+  const query = {
+    client_id: process.env.GH_CLIENT_ID,
+    state: state
+  };
+  if (scopes) query.scopes = scopes;
+  if (allow_signup !== undefined) query.allow_signup = allow_signup;
+  redirect(res, 302, `https://${githubUrl}/login/oauth/authorize?${querystring.stringify(query)}`);
 };
 
 const callback = async (req, res) => {
