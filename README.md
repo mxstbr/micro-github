@@ -38,7 +38,7 @@ To make this work you have to set the authorization callback URL of [your applic
 
 ![Authorization callback URL: 'your-url.now.sh'](https://cloud.githubusercontent.com/assets/168870/24585953/9543e03a-178e-11e7-8f10-07be5c10682c.png)
 
-To log people in provide a link to url `now` gave you plus the path `login` e.g. `http://localhost:3000/login` when they click on the link it will reditect to `https://github.com/login/oauth/authorize?client_id=asdf123&state`. (where `client_id` is your GitHub app client id in `.env` and `state` is a randomly generated string). This will redirect them to the GitHub sign in page for your app, which looks like this:
+To log people in provide a link to url `now` gave you plus the path `login` e.g. `http://localhost:3000/login` when they click on the link it will redirect to `https://github.com/login/oauth/authorize?client_id=asdf123&state`. (where `client_id` is your GitHub app client id in `.env` and `state` is a randomly generated string). This will redirect them to the GitHub sign in page for your app, which looks like this:
 
 ![Authorize my app to access your data on GitHub](https://cloud.githubusercontent.com/assets/7525670/22627265/fc50c680-ebbf-11e6-9126-dcdef37d3c3d.png)
 
