@@ -1,7 +1,6 @@
 require('dotenv').config()
 const querystring = require('querystring')
 const axios = require('axios')
-const { send } = require('micro')
 const { router, get } = require('microrouter');
 const redirect = require('micro-redirect');
 const uid = require('uid-promise');
