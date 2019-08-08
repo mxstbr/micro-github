@@ -9,7 +9,7 @@ const githubUrl = process.env.GH_HOST || 'github.com'
 const states = [];
 
 const redirectWithQueryString = (res, data) => {
-  const location = `${process.env.REDIRECT_URL}#${querystring.stringify(data)}`
+  const location = `${process.env.REDIRECT_URL}?${querystring.stringify(data)}`
   redirect(res, 302, location)
 }
 
@@ -21,7 +21,7 @@ const login = async (req, res) => {
     client_id: process.env.GH_CLIENT_ID,
     state: state
   };
-  query.scope = 'read:user,repo,user:email';
+  if (scope) query.scope = scope;
   if (allow_signup !== undefined) query.allow_signup = allow_signup;
   redirect(res, 302, `https://${githubUrl}/login/oauth/authorize?${querystring.stringify(query)}`);
 };
