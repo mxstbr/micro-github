@@ -1,0 +1,11 @@
+{
+  "name":"micro-github",
+  "version": 2,
+  "build": {
+    "env": {
+      "GH_CLIENT_ID": "@gh-client-id",
+      "GH_CLIENT_SECRET": "@gh-client-secret",
+      "REDIRECT_URL": "@redirect-url"
+    }
+  }
+}
