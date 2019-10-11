@@ -28,7 +28,7 @@ GH_HOST=github.my-company.com
 
 > Create an application on GitHub [here](https://github.com/settings/applications/new) to get your client id and secret if you haven't done that already.
 
-When authentication was successful, the user will be redirected to the `REDIRECT_URL` with the `access_token` query param set to the GitHub access token. You can then use that token to interact with the [GitHub API](https://developer.github.com/v3/)!
+When authentication is successful, the user will be redirected to the `REDIRECT_URL` with the `access_token` query param set to the GitHub access token. You can then use that token to interact with the [GitHub API](https://developer.github.com/v3/)!
 
 > E.g. setting `REDIRECT_URL=https://google.com` will redirect them to `https://google.com/?access_token=asdf123`. (where `asdf123` is the provided access token)
 
