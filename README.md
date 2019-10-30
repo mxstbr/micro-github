@@ -34,11 +34,11 @@ When authentication is successful, the user will be redirected to the `REDIRECT_
 
 ### Finish setup
 
-To make this work you have to set the authorization callback URL of [your application on GitHub](https://github.com/settings/developers) to whatever URL `now` gave you plus the path `/callback` e.g. `http://localhost:3000/callback`:
+To make this work you have to set the authorization callback URL of [your application on GitHub](https://github.com/settings/developers) to whatever URL `now` gave you plus the path `/api/callback` e.g. `http://localhost:3000/api/callback`:
 
-![Authorization callback URL: 'your-url.now.sh'](https://cloud.githubusercontent.com/assets/168870/24585953/9543e03a-178e-11e7-8f10-07be5c10682c.png)
+![Authorization callback URL: 'your-url.now.sh'](https://user-images.githubusercontent.com/174475/62680084-3e566780-b96b-11e9-9fb8-986da2356abe.png)
 
-To log people in provide a link to url `now` gave you plus the path `login` e.g. `http://localhost:3000/login` when they click on the link it will redirect to `https://github.com/login/oauth/authorize?client_id=asdf123&state`. (where `client_id` is your GitHub app client id in `.env` and `state` is a randomly generated string). This will redirect them to the GitHub sign in page for your app, which looks like this:
+To log people in provide a link to url `now` gave you plus the path `/api/login` e.g. `http://localhost:3000/api/login` when they click on the link it will redirect to `https://github.com/login/oauth/authorize?client_id=asdf123&state`. (where `client_id` is your GitHub app client id in `.env` and `state` is a randomly generated string). This will redirect them to the GitHub sign in page for your app, which looks like this:
 
 ![Authorize my app to access your data on GitHub](https://cloud.githubusercontent.com/assets/7525670/22627265/fc50c680-ebbf-11e6-9126-dcdef37d3c3d.png)
 

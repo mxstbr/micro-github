@@ -1,6 +1,6 @@
 {
   "name": "micro-github",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -23,7 +23,6 @@
     "dotenv": "^4.0.0",
     "micro": "^6.2.1",
     "micro-redirect": "^1.0.0",
-    "microrouter": "^2.0.1",
     "uid-promise": "^0.1.0"
   },
   "devDependencies": {

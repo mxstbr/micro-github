@@ -1,7 +1,6 @@
 require('dotenv').config()
-const querystring = require('querystring')
-const axios = require('axios')
-const { router, get } = require('microrouter');
+const querystring = require('querystring');
+const axios = require('axios');
 const redirect = require('micro-redirect');
 const uid = require('uid-promise');
 
@@ -66,7 +65,13 @@ const callback = async (req, res) => {
   }
 }
 
-module.exports = router(
-  get('/login', login),
-  get('/callback', callback)
-);
+// api/[action].js
+// https://micro-github.*USERNAME*.now.sh/api/login
+// https://micro-github.*USERNAME*.now.sh/api/callback
+module.exports = (req, res) => {
+  if(req.query.action === "login"){
+    login(req, res);
+  }else if(req.query.action === "callback"){
+    callback(req, res);
+  }
+}
